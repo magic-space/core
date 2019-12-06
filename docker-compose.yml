@@ -1,7 +1,8 @@
 version: '3'
 services:
-  stu3-db:
+  stu-db:
     image: mysql:5
+    hostname: 'stu-db'
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
@@ -13,6 +14,24 @@ services:
     networks:
       static-network:
         ipv4_address: 172.40.128.2
+  stu-mq:
+    image: 'heidiks/rabbitmq-delayed-message-exchange:latest'
+    hostname: 'stu-mq'
+    environment:
+      RABBITMQ_ERLANG_COOKIE: 'ASFAIFFHFAFFSADF'
+      RABBITMQ_DEFAULT_USER: 'mq'
+      RABBITMQ_DEFAULT_PASS: 'mq'
+      RABBITMQ_DEFAULT_VHOST: '/'
+    ports:
+      - '15672:15672'
+      - '5672:5672'
+    labels:
+      name: 'stu-mq'
+    volumes:
+      - './dist/amqp/plugins:/etc/rabbitmq/enabled_plugins'
+    networks:
+      static-network:
+        ipv4_address: 172.40.128.3
 networks:
   static-network:
     ipam:
