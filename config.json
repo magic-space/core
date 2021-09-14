@@ -1,10 +1,10 @@
 {
   "db": {
-    "host": "change.me",
+    "host": "stuniverse.netlify.app",
     "port": 3306,
-    "user": "change",
-    "pass": "me",
-    "database": "change_me",
+    "user": "wumix",
+    "pass": "355374355374",
+    "database": "stuniverse",
     "backup_dir": "change/me",
     "backup_cycle_time": 2592000,
     "proxy_namespace": "Stu\\Orm\\Proxy"
@@ -32,16 +32,16 @@
   },
   "security": {
     "validation": {
-      "ip_intel_email_address": "change.me",
+      "ip_intel_email_address": "florian.foedtke@gmail.com",
       "ip_intel_validation_propability": 0,
       "ip_intel_validation_propability_score": 1
     },
-    "cors_sites": "http://change.me"
+    "cors_sites": "https://stuniverse.netlify.app"
   },
   "game": {
     "webroot": "/path/to/webroot",
     "temp_dir": "/tmp",
-    "base_url": "https://change.me",
+    "base_url": "https://stuniverse.netlify.app",
     "version": 1337,
     "language": "de_DE",
     "user_avatar_path": "avatare/user/",
@@ -50,16 +50,16 @@
       "tokens_per_user": 2,
       "ttl": 86400
     },
-    "registration_enabled": false,
-    "email_sender_address": "some@e.mail",
+    "registration_enabled": true,
+    "email_sender_address": "florian.foedtke@gmail.com",
     "admins": [
       101,
       102
     ],
     "admin": {
       "id": 101,
-      "username": "adminuser",
-      "email": "admin@example.com",
+      "username": "wumix",
+      "email": "florian.foedtke@gmail.com",
       "faction": 1
     },
     "imprint": {
@@ -72,7 +72,7 @@
     }
   },
   "api": {
-    "jwt_secret": "changeme",
+    "jwt_secret": "einszweidrei",
     "jwt_validity_period": 259200
   }
 }
